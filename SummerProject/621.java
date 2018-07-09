@@ -47,3 +47,7 @@ public class Solution {
         return idle_slots > 0 ? idle_slots + tasks.length : tasks.length;
     }
 }
+
+
+/*Priority-Queue*/
+/*......*/
