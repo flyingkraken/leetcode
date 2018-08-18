@@ -1,3 +1,7 @@
+//我的想法是用map把T中的字母在S中最近出现的index保存，最后遍历map找到相差最远的两个index，作为最后输出string的起点和终点，但是据说会超时(Time limit exceeded))
+
+//以下是别人的方法
+
 boolean sContainsT(int mapS[], int mapT[]) {// Runtime = O(256) = O(1)
     for (int i = 0; i < mapT.length; i++) {// s should cover all characters in t
         if (mapT[i] > mapS[i])
