@@ -14,3 +14,4 @@ public int maxProfit(int[] prices) {
     
     return secondSell; // secondSell will be the max profit after passing the prices
 }
+ 
