@@ -77,7 +77,7 @@ class Solution {
         //if(nums.length<3) return res;
         
         for(int i=0;i<nums.length-2;i++){// i<nums.length-2
-        	if(i>0 && nums[i-1]==nums[i]) continue;//make sure num[i] is not chosen repeatedly
+        	if(i>0 && nums[i-1]==nums[i]) continue;//!!!!!!note the index is "i-1" instead of "i+1", this is to compare with the previous one to make sure num[i] is not chosen repeatedly
         	int l=i+1, r=nums.length-1;
         	while(l<r){
         		if(nums[l]+nums[r]<-nums[i]) l++;
@@ -90,8 +90,8 @@ class Solution {
         			res.add(temp);
                     l++;
                     r--;
-                    while(l<r && nums[l]==nums[l-1]) {l++;}
-                    while(l<r && nums[r]==nums[r+1]) {r--;}
+                    while(l<r && nums[l]==nums[l-1]) {l++;}//note the index is l-1, which is to compare with the previous number
+                    while(l<r && nums[r]==nums[r+1]) {r--;}//note the index is r+2, ...
         		}
         	}
         }
